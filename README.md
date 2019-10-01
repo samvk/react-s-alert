@@ -1,3 +1,7 @@
+**This is a fork of _react-s-alert_ which forces it to work with React 16's new context API.**
+
+---
+
 **This lib is no longer maintained. It needs major adjustments and rewrites. I hope I'll find some time for it in the future. Sorry.**
 
 
