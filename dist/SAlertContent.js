@@ -125,8 +125,10 @@
                 this.alertAudio && this.alertAudio.load();
             }
         }, {
-            key: 'componentWillMount',
-            value: function componentWillMount() {
+            key: 'componentDidMount',
+            value: function componentDidMount() {
+                var _this2 = this;
+
                 var beep = this.props.beep;
                 var condition = this.props.condition;
                 if (beep && typeof beep === 'string') {
@@ -154,11 +156,6 @@
                     this.alertAudio.load();
                     this.alertAudio.play();
                 }
-            }
-        }, {
-            key: 'componentDidMount',
-            value: function componentDidMount() {
-                var _this2 = this;
 
                 if (typeof this.props.timeout === 'number') {
                     this.closeTimer = setTimeout(function () {
@@ -189,8 +186,9 @@
                 var handleClose = this.handleCloseAlert.bind(this);
                 var contentTemplate = this.props.contentTemplate || _SAlertContentTmpl2.default;
                 var customFields = this.props.customFields || {};
+                var condition = this.props.condition;
 
-                return _react2.default.createElement(contentTemplate, { classNames: classNames, id: id, styles: styles, message: message, handleClose: handleClose, customFields: customFields });
+                return _react2.default.createElement(contentTemplate, { classNames: classNames, id: id, styles: styles, message: message, handleClose: handleClose, customFields: customFields, condition: condition });
             }
         }]);
 
